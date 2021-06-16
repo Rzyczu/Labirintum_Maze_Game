@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wybór Leweli</title>
+    <link rel="stylesheet" href="/styles/levels.css">
+    <script src="/script/levels.js"></script>
+
+</head>
+
+<body>
+    <h1>LABIRINTUM</h1>
+
+    <button id="level01">Level 1</button>
+    <br>
+    <button id="level02">Level 2</button>
+    <br>
+    <button id="level03">Level 3</button>
+
+    <script>
+        const buttons = document.querySelectorAll('button')
+        buttons.forEach(btn => {
+
+
+            btn.addEventListener('click', function (e) {
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+                let ripples = document.createElement('span');
+                ripples.style.left = x + 'px'
+                ripples.style.top = y + 'px'
+                this.appendChild(ripples)
+
+                setTimeout(() => {
+                    ripples.remove()
+                }, 500);
+            })
+        });
+    </script>
+</body>
+
+</html>
