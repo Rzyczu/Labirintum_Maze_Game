@@ -84,8 +84,6 @@ const setMap = {
         var Dane = {
         }
         setTimeout(() => {
-            console.log("Start Gry")
-            console.log(setMap.bazaDanych)
             window.location.href = "/game";
 
         }, 1000);

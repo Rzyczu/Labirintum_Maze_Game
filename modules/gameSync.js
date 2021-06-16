@@ -1,7 +1,7 @@
 module.exports = {
     checkWin(bazaDanych) {
         if (bazaDanych.win != null) {
-            console.log("koniec gry")
+            console.log("Koniec gry")
             return true
         } else {
             return false

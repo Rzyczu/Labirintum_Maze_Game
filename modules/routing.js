@@ -36,10 +36,12 @@ module.exports = function routing(app, path, dirname, bazaDanych, maps) {
     })
 
     app.get("/gameOver", (req, res) => {
-        if (req.session.dbKey)
+        if (req.session.dbKey) {
             res.sendFile(path.join(dirname, "/static/pages/end.html"))
+        }
         else
             res.redirect("/")
+
     })
 
     app.get("/getMap", (req, res) => {
@@ -69,9 +71,9 @@ module.exports = function routing(app, path, dirname, bazaDanych, maps) {
                 _id: req.session.dbKey
             }, function (err, doc) {
                 let poczatekGry = poczekalniaStatus.sprawdzRozpoczecieGry(doc)
-                console.log("poczatekGry");
-                console.log(poczatekGry);
-                if (poczatekGry)
+                //console.log(poczatekGry);
+                if (poczatekGry) {
+                    console.log("poczatek Gry");
                     bazaDanych.update({
                         _id: req.session.dbKey
                     }, {
@@ -90,6 +92,7 @@ module.exports = function routing(app, path, dirname, bazaDanych, maps) {
                                 }
                             })
                         })
+                }
                 else
                     res.json({
                         status: poczatekGry,
@@ -115,7 +118,7 @@ module.exports = function routing(app, path, dirname, bazaDanych, maps) {
 
     app.post("/winGame", (req, res) => {
         //nasz nick jest unikalny 
-        console.log("wygrał " + req.body.nick)
+        console.log("Wygrał " + req.body.nick)
         //do jakiegoś pokoju / tworzy nowy pokój 
         if (req.session.dbKey)
             bazaDanych.findOne({

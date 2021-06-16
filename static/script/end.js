@@ -34,4 +34,5 @@ function init(data) {
     else
         stats.innerHTML = "Wygrał gracz " + data.win.nick + " z czasem " + timeString;
 
+
 }

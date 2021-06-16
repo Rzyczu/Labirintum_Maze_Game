@@ -4,6 +4,7 @@ const db = require('nedb')
 const path = require('path')
 const session = require('express-session')
 const fs = require('fs');
+const favicon = require('serve-favicon');
 
 
 const app = express()
@@ -21,6 +22,8 @@ app.use(bodyParser.urlencoded({
 }))
 // parse application/json
 app.use(bodyParser.json()) // Dodaje  możlwiość czytanai JSON 
+
+app.use(favicon(path.join(__dirname, 'static', 'favicon.ico')))
 
 app.use(express.static(path.join(__dirname, 'static')))
 app.use(session({

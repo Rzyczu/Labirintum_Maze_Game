@@ -42,7 +42,6 @@ module.exports = {
                 chetni++
         })
         if (chetni == 2 && bazaDanych.map != null) {
-            console.log("startujemy")
             return true
         } else {
             return false

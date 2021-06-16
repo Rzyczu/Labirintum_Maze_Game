@@ -19,7 +19,7 @@ const poczekalnia = {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
+                //console.log(data)
                 this.bazaDanych = {
                     ...data
                 }
@@ -56,9 +56,9 @@ const poczekalnia = {
         }, 3000)
     },
     chceGrac(e) {
-        console.log(e.target.checked)
-        console.log(poczekalnia.kimJestem)
-        console.log(poczekalnia.tablicaSpanow[poczekalnia.numerGracza])
+        //console.log(e.target.checked)
+        //console.log(poczekalnia.kimJestem)
+        //console.log(poczekalnia.tablicaSpanow[poczekalnia.numerGracza])
         if (e.target.checked) {
             // poczekalnia.tablicaSpanow[poczekalnia.numerGracza].classList.add(poczekalnia.kimJestem.color)
             poczekalnia.chceGracNaSerer(e.target.checked)
@@ -99,8 +99,8 @@ const poczekalnia = {
         }
         let timeoutCount = this.bazaDanych.users[0].startTime - new Date().getTime();
         setTimeout(() => {
-            console.log("Start Gry")
-            console.log(this.bazaDanych)
+            //console.log("Start Gry")
+            //console.log(this.bazaDanych)
             window.location.href = "/game";
 
         }, timeoutCount);
