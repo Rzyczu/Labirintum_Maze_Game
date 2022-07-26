@@ -5,10 +5,10 @@ The project presents a <b>3D multiplayer game</b> for two players.
 </br>The goal of the game is to get through the maze as quickly as possible.
 
 ## Technologies
-Express
-Three JS
-CSS
-NeDB
+Express </br>
+Three JS </br>
+CSS </br>
+NeDB </br>
 
 ## Live Demo 
 https://labirintum.herokuapp.com/
