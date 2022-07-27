@@ -1,4 +1,4 @@
-# Labirintum
+# Labirintum - Maze Game
 
 ## About
 The project presents a <b>3D multiplayer game</b> for two players. 
