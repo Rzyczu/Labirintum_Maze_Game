@@ -9,7 +9,6 @@ CSS,
 NeDB,
 
 ## Demo
-Insert gif or link to demo
 
 ## Install and run
 Clone the project
